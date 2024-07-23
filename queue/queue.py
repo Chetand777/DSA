@@ -68,5 +68,45 @@ class ArrayQueue:
 
     self._front = 0
 
+
+# Test the implementation of Queue class
+
+def test_queue():
+    queue = ArrayQueue()
+
+    # Test is_empty on an empty queue
+    print(queue.is_empty())  # Expected output: True
+
+    # Test enqueue and first
+    queue.enqueue(10)
+    print(queue.first())  # Expected output: 10
+    print(len(queue))  # Expected output: 1
+    print(queue.is_empty())  # Expected output: False
+
+    # Test enqueue more elements
+    queue.enqueue(20)
+    print(queue.first())  # Expected output: 10
+    print(len(queue))  # Expected output: 2
+
+    # Test dequeue
+    print(queue.dequeue())  # Expected output: 10
+    print(queue.first())  # Expected output: 20
+    print(len(queue))  # Expected output: 1
+
+    # Test dequeue all elements
+    print(queue.dequeue())  # Expected output: 20
+    print(queue.is_empty())  # Expected output: True
+
+    # Test dequeue on empty queue (should raise Empty exception)
+    try:
+        queue.dequeue()
+    except Empty as e:
+        print(e)  # Expected output: "Queue is empty"
+
+
+test_queue()
+
+
+
   
 
