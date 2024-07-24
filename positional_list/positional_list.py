@@ -50,6 +50,24 @@ class DoublyLinkedList:
 
 # ---------------------------------------------------------------------------
 
+"""
+The operations that we can perform on Position List:
+1) first()
+2) last()
+3) before(p)
+4) after(p)
+5) is_empty()
+6) len
+7) iter
+8) add_first(e)
+9) add_last(e)
+10) add_before(e, p)
+11) add_after(e, p)
+12) delete(p)
+13) replace(p, e)
+
+"""
+
 class PositionalList(DoublyLinkedList):
   # Sequential container of elements allowing position access
 
